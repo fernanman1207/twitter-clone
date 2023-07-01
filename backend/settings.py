@@ -26,6 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
+#SECRET_KEY = 'z-y!*q#z*y5&*v31!=*k_d2wj+r*d@a0@n+d8xl-!5okc!46+4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -110,6 +111,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        #'NAME':'127.0.0.1:1521/orcl',
+        #'USER':'MAESTRO_DB',
+        #'PASSWORD':'puzledibujo205',
+        #'TEST':{
+            'USER': 'default_test',
+            'TBLSPACE': 'default_test_tbls',
+            'TBLSPACE_TMP': 'default_test_tbls_tmp'
     }
 }
 
