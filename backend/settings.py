@@ -71,7 +71,9 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'frontend/')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,9 +117,9 @@ DATABASES = {
         #'USER':'MAESTRO_DB',
         #'PASSWORD':'puzledibujo205',
         #'TEST':{
-            'USER': 'default_test',
-            'TBLSPACE': 'default_test_tbls',
-            'TBLSPACE_TMP': 'default_test_tbls_tmp'
+            #'USER': 'default_test',
+            #'TBLSPACE': 'default_test_tbls',
+            #'TBLSPACE_TMP': 'default_test_tbls_tmp'
     }
 }
 
@@ -161,7 +163,8 @@ MEDIA_URL = 'media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'dist/static')
+    os.path.join(BASE_DIR, 'dist/static'),
+    os.path.join(BASE_DIR, 'frontend/static'),
 ]
 
 # Default primary key field type
